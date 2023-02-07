@@ -45,7 +45,7 @@ from .keccak import keccak_256
 class Seed(object):
     """Creates a seed object either from local system randomness or an imported phrase.
 
-    :rtype: :class:`Seed <monero.seed.Seed>`
+    :rtype: :class:`Seed <beldex.seed.Seed>`
     """
 
     def __init__(self, phrase_or_hex="", wordlist="English"):
@@ -53,9 +53,9 @@ class Seed(object):
         if it's hexadecimal or mnemonic word string. Gather the values and store them.
         If no seed is passed, automatically generate a new one from local system randomness.
 
-        :rtype: :class:`Seed <monero.seed.Seed>`
+        :rtype: :class:`Seed <beldex.seed.Seed>`
         """
-        self.phrase = ""  # 13 or 25 word mnemonic word string
+        self.phrase = ""  # 25 word mnemonic word string
         self.hex = ""  # hexadecimal
 
         self.word_list = wordlists.get_wordlist(wordlist)
@@ -72,13 +72,13 @@ class Seed(object):
                     # with checksum
                     self._validate_checksum()
                 self._decode_seed()
-            elif len(seed_split) >= 12:
-                # mymonero mnemonic
-                self.phrase = phrase_or_hex
-                if len(seed_split) == 13:
-                    # with checksum
-                    self._validate_checksum()
-                self._decode_seed()
+            # elif len(seed_split) >= 12:
+            #     # mymonero mnemonic
+            #     self.phrase = phrase_or_hex
+            #     if len(seed_split) == 13:
+            #         # with checksum
+            #         self._validate_checksum()
+            #     self._decode_seed()
             elif len(seed_split) == 1:
                 # single string, probably hex, but confirm
                 if not len(phrase_or_hex) % 8 == 0:
