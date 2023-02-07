@@ -196,5 +196,5 @@ methods reflect the raw JSON objects returned by the daemon. An example:
 API reference
 -------------
 
-.. automodule:: monero.daemon
+.. automodule:: beldex.daemon
    :members:

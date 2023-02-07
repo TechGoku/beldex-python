@@ -10,7 +10,7 @@ Python module for Beldex
    Otherwise you're safe. Standard wallet operations like receiving payments, spending, address
    generation etc. are NOT AFFECTED.
 
-Welcome to the documentation for the ``monero`` Python module.
+Welcome to the documentation for the ``beldex`` Python module.
 
 The aim of this project is to offer a set of tools for interacting with Beldex
 cryptocurrency in Python. It provides higher level classes representing objects

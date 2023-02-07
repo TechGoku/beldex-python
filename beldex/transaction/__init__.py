@@ -16,7 +16,7 @@ from ..keccak import keccak_256
 class Payment(object):
     """
     A payment base class, representing payment not associated with any
-    :class:`Account <monero.account.Account>`.
+    :class:`Account <beldex.account.Account>`.
 
     This class is not intended to be turned into objects by the user,
     it is used by backends.
@@ -55,7 +55,7 @@ class Payment(object):
 class IncomingPayment(Payment):
     """
     An incoming payment (one that increases the balance of an
-    :class:`Account <monero.account.Account>`)
+    :class:`Account <beldex.account.Account>`)
     """
 
     _reprstr = "in: {} @ {} {:.12f} id={}"
@@ -64,7 +64,7 @@ class IncomingPayment(Payment):
 class OutgoingPayment(Payment):
     """
     An outgoing payment (one that decreases the balance of an
-    :class:`Account <monero.account.Account>`)
+    :class:`Account <beldex.account.Account>`)
     """
 
     destinations = None
@@ -355,7 +355,7 @@ class Output(object):
 class PaymentManager(object):
     """
     A payment query manager, handling either incoming or outgoing payments of
-    an :class:`Account <monero.account.Account>`.
+    an :class:`Account <beldex.account.Account>`.
 
     This class is not intended to be turned into objects by the user,
     it is used by backends.

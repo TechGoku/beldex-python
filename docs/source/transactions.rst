@@ -246,5 +246,5 @@ ring size or unlock time. See API reference below for details.
 API reference
 -------------
 
-.. automodule:: monero.transaction
+.. automodule:: beldex.transaction
    :members:

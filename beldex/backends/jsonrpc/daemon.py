@@ -9,7 +9,7 @@ import requests
 from ... import address
 from ... import exceptions
 from ...block import Block
-from ...const import NET_MAIN, NET_TEST, NET_STAGE
+from ...const import NET_MAIN, NET_TEST, NET_DEV
 from ...numbers import from_atomic, to_atomic
 from ...transaction import Transaction
 from .exceptions import RPCError, MethodNotFound, Unauthorized
@@ -91,7 +91,7 @@ class JSONRPCDaemon(object):
         self,
         protocol="http",
         host="127.0.0.1",
-        port=18081,
+        port=19091,
         path="/json_rpc",
         user="",
         password="",
@@ -407,8 +407,8 @@ class JSONRPCDaemon(object):
             "difficulty" unsigned int; The strength of the Beldex network based on mining power.
             "hash": str; The hash of this block.
             "height": unsigned int; The number of blocks preceding this block on the blockchain.
-            "major_version": unsigned int; The major version of the monero protocol at this block height.
-            "minor_version": unsigned int; The minor version of the monero protocol at this block height.
+            "major_version": unsigned int; The major version of the beldex protocol at this block height.
+            "minor_version": unsigned int; The minor version of the beldex protocol at this block height.
             "nonce": unsigned int; a cryptographic random one-time number used in mining a Beldex block.
             "num_txes": unsigned int; Number of transactions in the block, not counting the coinbase tx.
             "orphan_status": bool; Usually false. If true, this block is not part of the longest chain.
@@ -437,8 +437,8 @@ class JSONRPCDaemon(object):
             "difficulty" unsigned int; The strength of the Beldex network based on mining power.
             "hash": str; The hash of this block.
             "height": unsigned int; The number of blocks preceding this block on the blockchain.
-            "major_version": unsigned int; The major version of the monero protocol at this block height.
-            "minor_version": unsigned int; The minor version of the monero protocol at this block height.
+            "major_version": unsigned int; The major version of the beldex protocol at this block height.
+            "minor_version": unsigned int; The minor version of the beldex protocol at this block height.
             "nonce": unsigned int; a cryptographic random one-time number used in mining a Beldex block.
             "num_txes": unsigned int; Number of transactions in the block, not counting the coinbase tx.
             "orphan_status": bool; Usually false. If true, this block is not part of the longest chain.
@@ -535,8 +535,8 @@ class JSONRPCDaemon(object):
         "blob": str; Hexadecimal blob of block information.
         "block_header": A structure containing block header information. See get_last_block_header.
         "json": str; JSON formatted string details:
-            "major_version": unsigned int; The major version of the monero protocol at this block height.
-            "minor_version": unsigned int; The minor version of the monero protocol at this block height.
+            "major_version": unsigned int; The major version of the beldex protocol at this block height.
+            "minor_version": unsigned int; The minor version of the beldex protocol at this block height.
             "timestamp": unsigned int; The unix time at which the block was recorded into the blockchain.
             "prev_id": str; The hash of the block immediately preceding this block in the chain.
             "nonce": unsigned int; a cryptographic random one-time number used in mining a Monero block.
@@ -1550,8 +1550,8 @@ class JSONRPCDaemon(object):
             self._net = NET_MAIN
         if info["testnet"]:
             self._net = NET_TEST
-        if info["stagenet"]:
-            self._net = NET_STAGE
+        if info["devnet"]:
+            self._net = NET_DEV
 
     def _set_restricted(self):
         try:

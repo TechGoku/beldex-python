@@ -42,7 +42,7 @@ You may however create a wallet in the meantime:
 
 .. code-block:: shell
 
-    $ monero-wallet-cli --testnet --generate-new-wallet testwallet
+    $ beldex-wallet-cli --testnet --generate-new-wallet testwallet
 
 For now you may leave the password empty (testnet coins are worthless).
 
@@ -54,7 +54,7 @@ a JSON RPC interface. Start it by typing:
 
 .. code-block:: shell
 
-    $ monero-wallet-rpc --testnet --wallet-file testwallet --password "" --rpc-bind-port 28088 --disable-rpc-login
+    $ beldex-wallet-rpc --testnet --wallet-file testwallet --password "" --rpc-bind-port 28088 --disable-rpc-login
 
 Now you're almost ready to start using Python.
 

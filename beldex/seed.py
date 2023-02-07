@@ -148,17 +148,17 @@ class Seed(object):
         return self._ed_pub_view_key
 
     def public_address(self, net=const.NET_MAIN):
-        """Returns the master :class:`Address <monero.address.Address>` represented by the seed.
+        """Returns the master :class:`Address <beldex.address.Address>` represented by the seed.
 
         :param net: the network, one of `const.NET_*`; default is `const.NET_MAIN`
 
-        :rtype: :class:`Address <monero.address.Address>`
+        :rtype: :class:`Address <beldex.address.Address>`
         """
         # backward compatibility
         _net = net[:-3] if net.endswith("net") else net
         if net not in const.NETS:
             raise ValueError(
-                "Invalid net argument '{:s}'. Must be one of monero.const.NET_*".format(
+                "Invalid net argument '{:s}'. Must be one of beldex.const.NET_*".format(
                     net
                 )
             )

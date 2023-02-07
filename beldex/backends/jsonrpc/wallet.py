@@ -18,7 +18,7 @@ _log = logging.getLogger(__name__)
 
 class JSONRPCWallet(object):
     """
-    JSON RPC backend for Beldex wallet (``monero-wallet-rpc``)
+    JSON RPC backend for Beldex wallet (``beldex-wallet-rpc``)
 
     :param protocol: `http` or `https`
     :param host: host name or IP

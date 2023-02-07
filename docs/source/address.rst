@@ -9,7 +9,7 @@ Beldex addresses are base58-encoded strings. You may disassemble each of them
 using the excellent `address analysis tool`_ from *luigi1111*.
 
 While the ordinary string representation is perfectly valid to use, you may
-want to use validation and other features provided by the ``monero.address``
+want to use validation and other features provided by the ``beldex.address``
 package.
 
 .. _`address analysis tool`: https://xmr.llcoins.net/addresstests.html
@@ -17,7 +17,7 @@ package.
 Address validation and instatination
 ------------------------------------
 
-The function ``monero.address.address()`` will recognize and validate Beldex
+The function ``beldex.address.address()`` will recognize and validate Beldex
 address, returning an instance that provides additional functionality.
 
 The following example uses addresses from the wallet :doc:`we have generated in
@@ -41,7 +41,7 @@ Let's start with the master address:
     Out[5]: '2c5ba76d22e48a7ea4ddabea3cce66808ba0cc91265371910f893962e977af1e'
 
     In [6]: type(a)
-    Out[6]: monero.address.Address
+    Out[6]: beldex.address.Address
 
 We may use a subaddress too:
 
@@ -59,7 +59,7 @@ We may use a subaddress too:
     Out[10]: '2bf801cdaf3a8b41020098a6d5e194f48fa62129fe9d8f09d19fee9260665baa'
 
     In [11]: type(b)
-    Out[11]: monero.address.SubAddress
+    Out[11]: beldex.address.SubAddress
 
 These two classes, ``Address`` and ``SubAddress`` have similar functionality
 but one significant difference. Only the former may form *integrated address*.
@@ -122,7 +122,7 @@ integrated addresses`_.
     <ipython-input-23-5a5811a6962a> in <module>()
     ----> 1 b.with_payment_id(0xfeedbadbeef)
 
-    ~/devel/monero-python/monero/address.py in with_payment_id(self, _)
+    ~/devel/beldex-python/beldex/address.py in with_payment_id(self, _)
          99 
         100     def with_payment_id(self, _):
     --> 101         raise TypeError("SubAddress cannot be integrated with payment ID")
@@ -131,7 +131,7 @@ integrated addresses`_.
 
     TypeError: SubAddress cannot be integrated with payment ID
 
-The ``monero.numbers.PaymentID`` class validates payment IDs. It accepts both
+The ``beldex.numbers.PaymentID`` class validates payment IDs. It accepts both
 integer and hexadecimal string representations.
 
 .. code-block:: python
@@ -166,7 +166,7 @@ Long payment IDs cannot be integrated:
     <ipython-input-8-7098746f0b69> in <module>
     ----> 1 a.with_payment_id(p3)
 
-    ~/devel/monero-python/monero/address.py in with_payment_id(self, payment_id)
+    ~/devel/beldex-python/beldex/address.py in with_payment_id(self, payment_id)
         138         payment_id = numbers.PaymentID(payment_id)
         139         if not payment_id.is_short():
     --> 140             raise TypeError("Payment ID {0} has more than 64 bits and cannot be integrated".format(payment_id))
@@ -179,5 +179,5 @@ Long payment IDs cannot be integrated:
 API reference
 -------------
 
-.. automodule:: monero.address
+.. automodule:: beldex.address
    :members:

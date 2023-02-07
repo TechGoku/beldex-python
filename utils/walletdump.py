@@ -26,7 +26,7 @@ def get_wallet():
         "wallet_rpc_url",
         nargs="?",
         type=url_data,
-        default="127.0.0.1:18082",
+        default="127.0.0.1:19092",
         help="Wallet RPC URL [user[:password]@]host[:port]",
     )
     argsparser.add_argument(

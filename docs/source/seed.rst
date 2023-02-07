@@ -92,5 +92,5 @@ Once the ``Seed`` class is constructed, you can derive `all of the keys`_ associ
 API reference
 -------------
 
-.. automodule:: monero.seed
+.. automodule:: beldex.seed
    :members:

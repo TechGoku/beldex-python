@@ -42,9 +42,9 @@ the new dependency and run as usual.
 
 Backward-incompatible changes:
 
- 1. The ``monero.prio`` submodule has been removed. Switch to ``monero.const``.
+ 1. The ``beldex.prio`` submodule has been removed. Switch to ``beldex.const``.
  2. Methods ``.is_mainnet()``, ``.is_testnet()``, ``.is_stagenet()`` have been removed from
-    ``monero.address.Address`` instances. Use ``.net`` attribute instead.
+    ``beldex.address.Address`` instances. Use ``.net`` attribute instead.
 
 0.7
 ---
@@ -56,20 +56,20 @@ Backward-incompatible changes:
 
 Deprecations:
 
- 1. ``monero.const`` has been introduced. Transaction priority consts will move to
-    ``monero.const.PRIO_*``. The ``monero.prio`` submodule has been deprecated and will be gone
+ 1. ``beldex.const`` has been introduced. Transaction priority consts will move to
+    ``beldex.const.PRIO_*``. The ``beldex.prio`` submodule has been deprecated and will be gone
     in 0.8.
  2. Methods ``.is_mainnet()``, ``.is_testnet()``, ``.is_stagenet()`` have been deprecated and
-    new ``.net`` property has been added to all ``monero.address.Address`` instances. The values
-    are from among ``monero.const.NET_*`` and have string representation of ``"main"``, ``"test"``
-    and ``"stage"`` respectively. Likewise, ``monero.seed.Seed.public_address()`` accepts those
+    new ``.net`` property has been added to all ``beldex.address.Address`` instances. The values
+    are from among ``beldex.const.NET_*`` and have string representation of ``"main"``, ``"test"``
+    and ``"stage"`` respectively. Likewise, ``beldex.seed.Seed.public_address()`` accepts those
     new values.
     All deprecated uses will raise proper warnings in 0.7.x and will be gone with 0.8.
 
 0.6
 ---
 
-With version 0.6 the package name on PyPi has changed from `monero-python` to just `monero`.
+With version 0.6 the package name on PyPi has changed from `beldex-python` to just `beldex`.
 
 Backward-incompatible changes:
 
@@ -84,10 +84,10 @@ Backward-incompatible changes:
 
  1. The ``ringsize`` parameter is gone from ``.transfer()`` and ``.transfer_multiple()`` methods of
     both ``Wallet`` and ``Account``. Since Beldex 0.13 the ring size is of constant value 11.
- 2. The class hierarchy in ``monero.address`` has been reordered. ``Address`` now represents only
+ 2. The class hierarchy in ``beldex.address`` has been reordered. ``Address`` now represents only
     master address of a wallet. ``SubAddress`` doesn't inherit after it anymore, but all classes
     share the common base of ``BaseAddress``.
     
     In particular, make sure that your code doesn't check a presence of Beldex address by checking
-    ``isinstance(x, monero.address.Address)``. That will not work for sub-addresses anymore.
-    Replace it by ``isinstance(x, monero.address.BaseAddress)``.
+    ``isinstance(x, beldex.address.Address)``. That will not work for sub-addresses anymore.
+    Replace it by ``isinstance(x, beldex.address.BaseAddress)``.

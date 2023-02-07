@@ -44,7 +44,7 @@ class JSONRPCDaemonTestCase(JSONTestCase):
         self.backend = self.daemon._backend
 
         # this is disabled b/c raw_request logs errors
-        logging.getLogger("monero.backends.jsonrpc.daemon").disabled = True
+        logging.getLogger("beldex.backends.jsonrpc.daemon").disabled = True
 
     @responses.activate
     def test_basic_info(self):

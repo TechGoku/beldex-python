@@ -1,5 +1,5 @@
 Exceptions
 ==========
 
-.. automodule:: monero.exceptions
+.. automodule:: beldex.exceptions
    :members:

@@ -25,7 +25,7 @@ def get_daemon():
         "daemon_rpc_url",
         nargs="?",
         type=url_data,
-        default="127.0.0.1:18081",
+        default="127.0.0.1:19091",
         help="Daemon RPC URL [user[:password]@]host[:port]",
     )
     argsparser.add_argument(
@@ -64,8 +64,8 @@ print(
     "Alt blocks:  {alt_blocks_count:15d}\n".format(
         net="test"
         if info["testnet"]
-        else "stage"
-        if info["stagenet"]
+        else "dev"
+        if info["devnet"]
         else "main"
         if info["mainnet"]
         else "unknown",

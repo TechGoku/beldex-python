@@ -11,7 +11,7 @@ the module offers the following options:
 JSON RPC
 ----------------
 
-This backend requires a running ``monero-wallet-rpc`` process with a Beldex wallet file opened.
+This backend requires a running ``beldex-wallet-rpc`` process with a Beldex wallet file opened.
 This can be on your local system or a remote node, depending on where the wallet file lives and
 where the daemon is running. Refer to the quickstart for general setup information.
 
@@ -25,13 +25,13 @@ the default *mainnet* port on *localhost*, like below:
 
 .. code-block:: python
 
-    In [1]: wallet = Wallet()   # is equivalent to: wallet = Wallet(JSONRPCWallet(host='localhost', port=18081)
+    In [1]: wallet = Wallet()   # is equivalent to: wallet = Wallet(JSONRPCWallet(host='localhost', port=19091)
 
 .. _`requests`: http://docs.python-requests.org/
 
 .. _`Wallet RPC`: https://getmonero.org/resources/developer-guides/wallet-rpc.html
 
-.. automodule:: monero.backends.jsonrpc
+.. automodule:: beldex.backends.jsonrpc
    :members:
 
 Offline
@@ -48,5 +48,5 @@ wallet itself. In version 0.5 the only practical use is to cold-generate
    In [9]: w.get_address(100,37847)
    Out[9]: 883Gcsq65iqh4UL3fJTWLxY45skXyFVNQJZ4bdw4TJcqd8vafvtpX4p6HNmawqFMQ6TwJP7adzyLT1fbU6z1n9dqB9bJrfn
 
-.. automodule:: monero.backends.offline
+.. automodule:: beldex.backends.offline
    :members:

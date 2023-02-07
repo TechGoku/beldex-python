@@ -40,7 +40,7 @@ argsparser.add_argument(
     "wallet_rpc_url",
     nargs="?",
     type=url_data,
-    default="127.0.0.1:18082",
+    default="127.0.0.1:19092",
     help="Wallet RPC URL [user[:password]@]host[:port]",
 )
 argsparser.add_argument(
@@ -52,7 +52,7 @@ argsparser.add_argument(
 argsparser.add_argument(
     "-p",
     dest="prio",
-    choices=["unimportant", "normal", "elevated", "priority"],
+    choices=["unimportant", "normal", "elevated", "priority" ,"flash"],
     default="normal",
 )
 argsparser.add_argument(

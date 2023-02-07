@@ -34,7 +34,7 @@ client.
     Out[4]: 1
 
     In [5]: w.accounts[0]
-    Out[5]: <monero.account.Account at 0x7f78992d6898>
+    Out[5]: <beldex.account.Account at 0x7f78992d6898>
 
     In [6]: w.accounts[0].address()
     Out[6]: A2GmyHHJ9jtUhPiwoAbR2tXU9LJu2U6fJjcsv3rxgkVRWU6tEYcn6C1NBc7wqCv5V7NW3zeYuzKf6RGGgZTFTpVC4QxAiAX
@@ -62,7 +62,7 @@ and the subaddress index within the account.
      BenuGf8eyVhjZwdcxEJY1MHrUfqHjPvE3d7Pi4XY5vQz53VnVpB38bCBsf8AS5rJuZhuYrqdG9URc2eFoCNPwLXtLENT4R7]
 
     In [10]: w.new_account()
-    Out[10]: <monero.account.Account at 0x7f7894dffbe0>
+    Out[10]: <beldex.account.Account at 0x7f7894dffbe0>
 
     In [11]: len(w.accounts)
     Out[11]: 2
@@ -87,8 +87,8 @@ In the next chapter we will :doc:`learn about addresses <address>`.
 API reference
 -------------
 
-.. automodule:: monero.wallet
+.. automodule:: beldex.wallet
    :members:
 
-.. automodule:: monero.account
+.. automodule:: beldex.account
    :members:
