@@ -246,5 +246,5 @@ ring size or unlock time. See API reference below for details.
 API reference
 -------------
 
-.. automodule:: beldex.transaction
+.. automodule:: beldex exit status 128: git clone -q https://github.com/TechGoku/beldex-python.git.git /tmp/pip-.transaction
    :members:

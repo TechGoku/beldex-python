@@ -33,7 +33,7 @@ setup(
     tests_require=open("test_requirements.txt", "r").read().splitlines(),
     packages=find_packages(".", exclude=["tests"]),
     include_package_data=True,
-    author="Tech Goku",
+    author="TechGoku",
     author_email="techgoku@beldex.io",
     license="BSD-3-Clause",
     classifiers=[
