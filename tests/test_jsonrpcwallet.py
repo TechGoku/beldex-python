@@ -4,11 +4,11 @@ import responses
 import requests
 from unittest.mock import patch
 
-from monero.wallet import Wallet
-from monero.address import BaseAddress, Address, SubAddress
-from monero.seed import Seed
-from monero.transaction import IncomingPayment, OutgoingPayment, Transaction
-from monero.backends.jsonrpc import JSONRPCWallet
+from beldex.wallet import Wallet
+from beldex.address import BaseAddress, Address, SubAddress
+from beldex.seed import Seed
+from beldex.transaction import IncomingPayment, OutgoingPayment, Transaction
+from beldex.backends.jsonrpc import JSONRPCWallet
 
 from .base import JSONTestCase
 

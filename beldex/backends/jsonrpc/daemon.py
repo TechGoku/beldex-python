@@ -23,8 +23,8 @@ RESTRICTED_MAX_TRANSACTIONS = 100
 
 class JSONRPCDaemon(object):
     """
-    JSON RPC backend for Monero daemon.
-    The offical documentation for the Monero Daemon RPC Protocol can be found at the link below.
+    JSON RPC backend for Beldex daemon.
+    The offical documentation for the Beldex Daemon RPC Protocol can be found at the link below.
     https://www.getmonero.org/resources/developer-guides/daemon-rpc.html#on_get_block_hash
     Much of the in-code documentation of this class is derived from this document.
 
@@ -404,12 +404,12 @@ class JSONRPCDaemon(object):
         "block_header": {
             "block_size": unsigned int; The block size in bytes.
             "depth": unsigned int; The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-            "difficulty" unsigned int; The strength of the Monero network based on mining power.
+            "difficulty" unsigned int; The strength of the Beldex network based on mining power.
             "hash": str; The hash of this block.
             "height": unsigned int; The number of blocks preceding this block on the blockchain.
             "major_version": unsigned int; The major version of the monero protocol at this block height.
             "minor_version": unsigned int; The minor version of the monero protocol at this block height.
-            "nonce": unsigned int; a cryptographic random one-time number used in mining a Monero block.
+            "nonce": unsigned int; a cryptographic random one-time number used in mining a Beldex block.
             "num_txes": unsigned int; Number of transactions in the block, not counting the coinbase tx.
             "orphan_status": bool; Usually false. If true, this block is not part of the longest chain.
             "prev_hash": str; The hash of the block immediately preceding this block in the chain.
@@ -434,12 +434,12 @@ class JSONRPCDaemon(object):
         "block_header": {
             "block_size": unsigned int; The block size in bytes.
             "depth": unsigned int; The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-            "difficulty" unsigned int; The strength of the Monero network based on mining power.
+            "difficulty" unsigned int; The strength of the Beldex network based on mining power.
             "hash": str; The hash of this block.
             "height": unsigned int; The number of blocks preceding this block on the blockchain.
             "major_version": unsigned int; The major version of the monero protocol at this block height.
             "minor_version": unsigned int; The minor version of the monero protocol at this block height.
-            "nonce": unsigned int; a cryptographic random one-time number used in mining a Monero block.
+            "nonce": unsigned int; a cryptographic random one-time number used in mining a Beldex block.
             "num_txes": unsigned int; Number of transactions in the block, not counting the coinbase tx.
             "orphan_status": bool; Usually false. If true, this block is not part of the longest chain.
             "prev_hash": str; The hash of the block immediately preceding this block in the chain.
@@ -469,12 +469,12 @@ class JSONRPCDaemon(object):
         "block_header": {
             "block_size": unsigned int; The block size in bytes.
             "depth": unsigned int; The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-            "difficulty" unsigned int; The strength of the Monero network based on mining power.
+            "difficulty" unsigned int; The strength of the Beldex network based on mining power.
             "hash": str; The hash of this block.
             "height": unsigned int; The number of blocks preceding this block on the blockchain.
             "major_version": unsigned int; The major version of the monero protocol at this block height.
             "minor_version": unsigned int; The minor version of the monero protocol at this block height.
-            "nonce": unsigned int; a cryptographic random one-time number used in mining a Monero block.
+            "nonce": unsigned int; a cryptographic random one-time number used in mining a Beldex block.
             "num_txes": unsigned int; Number of transactions in the block, not counting the coinbase tx.
             "orphan_status": bool; Usually false. If true, this block is not part of the longest chain.
             "prev_hash": str; The hash of the block immediately preceding this block in the chain.

@@ -1,4 +1,4 @@
-Python Monero module
+Python Beldex module
 ====================
 
 |travis|_ |coveralls|_
@@ -18,7 +18,7 @@ Python Monero module
    Otherwise you're safe. Standard wallet operations like receiving payments, spending, address
    generation etc. are NOT AFFECTED.
 
-A comprehensive Python module for handling Monero cryptocurrency.
+A comprehensive Python module for handling Beldex cryptocurrency.
 
 * release 1.1.1
 * open source: https://github.com/monero-ecosystem/monero-python

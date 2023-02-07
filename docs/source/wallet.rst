@@ -12,7 +12,7 @@ addresses via the default JSON RPC backend:
 
 .. code-block:: python
 
-    In [1]: from monero.wallet import Wallet
+    In [1]: from beldex.wallet import Wallet
 
     In [2]: w = Wallet(port=28088)
 

@@ -28,7 +28,7 @@ Authors
 Acknowledgements
 ----------------
 
-This project has been generously funded by the donors of Monero Forum Funding System.
+This project has been generously funded by the donors of Beldex Forum Funding System.
 You may see the `original project submission`_.
 
 .. _original project submission: https://forum.getmonero.org/8/funding-required/89298/comprehensive-python-module-for-handling-monero

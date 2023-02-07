@@ -3,11 +3,11 @@ from .transaction import PaymentManager
 
 
 class Account(object):
-    """Monero account.
+    """Beldex account.
 
     Provides interface to operate on a wallet's account.
 
-    Accounts belong to a :class:`Wallet <monero.wallet.Wallet>` and act like
+    Accounts belong to a :class:`Wallet <beldex.wallet.Wallet>` and act like
     separate sub-wallets. No funds can be moved between accounts off-chain
     (without a transaction).
 
@@ -48,7 +48,7 @@ class Account(object):
         """
         Return account's main address.
 
-        :rtype: :class:`SubAddress <monero.address.SubAddress>`
+        :rtype: :class:`SubAddress <beldex.address.SubAddress>`
         """
         return self._backend.addresses(account=self.index, addr_indices=[0])[0]
 
@@ -66,7 +66,7 @@ class Account(object):
 
         :param label: address label as `str`
         :rtype: tuple of subaddress, subaddress index (minor):
-                (:class:`SubAddress <monero.address.SubAddress>`, `int`)
+                (:class:`SubAddress <beldex.address.SubAddress>`, `int`)
         """
         return self._backend.new_address(account=self.index, label=label)
 
@@ -74,10 +74,10 @@ class Account(object):
         """
         Returns balances of given addresses, or all addresses if none given.
 
-        :param addresses: a sequence of address as :class:`Address <monero.address.Addresss>`
+        :param addresses: a sequence of address as :class:`Address <beldex.address.Addresss>`
                     or their indexes within the account as `int`s
         :rtype: list of index, subaddress, balance, num_UTXOs:
-                    (`int`, :class:`Address <monero.address.Address>`, `Decimal`, `int`)
+                    (`int`, :class:`Address <beldex.address.Address>`, `Decimal`, `int`)
         """
         indices = None
         _addresses = self.addresses()
@@ -102,19 +102,19 @@ class Account(object):
         """
         Sends a transfer. Returns a list of resulting transactions.
 
-        :param address: destination :class:`Address <monero.address.Address>` or subtype
+        :param address: destination :class:`Address <beldex.address.Address>` or subtype
         :param amount: amount to send
         :param priority: transaction priority, implies fee. The priority can be a number
                     from 1 to 4 (unimportant, normal, elevated, priority) or a constant
-                    from `monero.const.PRIO_*`.
+                    from `beldex.const.PRIO_*`.
         :param payment_id: ID for the payment (must be None if
-                        :class:`IntegratedAddress <monero.address.IntegratedAddress>`
+                        :class:`IntegratedAddress <beldex.address.IntegratedAddress>`
                         is used as the destination)
         :param unlock_time: the extra unlock delay
         :param relay: if `True`, the wallet will relay the transaction(s) to the network
                         immediately; when `False`, it will only return the transaction(s)
                         so they might be broadcasted later
-        :rtype: list of :class:`Transaction <monero.transaction.Transaction>`
+        :rtype: list of :class:`Transaction <beldex.transaction.Transaction>`
         """
         return self._backend.transfer(
             [(address, amount)],
@@ -130,26 +130,19 @@ class Account(object):
         destinations,
         priority=const.PRIO_NORMAL,
         payment_id=None,
-        unlock_time=0,
-        relay=True,
-    ):
-        """
-        Sends a batch of transfers. Returns a list of resulting transactions.
-
-        :param destinations: a list of destination and amount pairs:
-                    [(:class:`Address <monero.address.Address>`, `Decimal`), ...]
+        unlock_time=0,NET_STAGEro.address.Address>`, `Decimal`), ...]
         :param priority: transaction priority, implies fee. The priority can be a number
                     from 1 to 4 (unimportant, normal, elevated, priority) or a constant
-                    from `monero.const.PRIO_*`.
+                    from `beldex.const.PRIO_*`.
         :param payment_id: ID for the payment (must be None if
-                    :class:`IntegratedAddress <monero.address.IntegratedAddress>`
+                    :class:`IntegratedAddress <beldex.address.IntegratedAddress>`
                     is used as the destination)
         :param unlock_time: the extra unlock delay
         :param relay: if `True`, the wallet will relay the transaction(s) to the network
                     immediately; when `False`, it will only return the transaction(s)
                     so they might be broadcast later
         :rtype: list of transaction and amount pairs:
-                [(:class:`Transaction <monero.transaction.Transaction>`, `Decimal`), ...]
+                [(:class:`Transaction <beldex.transaction.Transaction>`, `Decimal`), ...]
         """
         return self._backend.transfer(
             destinations,
@@ -172,12 +165,12 @@ class Account(object):
         """
         Sends all unlocked balance to an address. Returns a list of resulting transactions.
 
-        :param address: destination :class:`Address <monero.address.Address>` or subtype
+        :param address: destination :class:`Address <beldex.address.Address>` or subtype
         :param priority: transaction priority, implies fee. The priority can be a number
                     from 1 to 4 (unimportant, normal, elevated, priority) or a constant
-                    from `monero.const.PRIO_*`.
+                    from `beldex.const.PRIO_*`.
         :param payment_id: ID for the payment (must be None if
-                    :class:`IntegratedAddress <monero.address.IntegratedAddress>`
+                    :class:`IntegratedAddress <beldex.address.IntegratedAddress>`
                     is used as the destination)
         :param subaddr_indices: a sequence of subaddress indices to sweep from. Empty sequence
                     or `None` means sweep all positive balances.
@@ -185,7 +178,7 @@ class Account(object):
         :param relay: if `True`, the wallet will relay the transaction(s) to the network
                     immediately; when `False`, it will only return the transaction(s)
                     so they might be broadcast later
-        :rtype: list of :class:`Transaction <monero.transaction.Transaction>`
+        :rtype: list of :class:`Transaction <beldex.transaction.Transaction>`
         """
         return self._backend.sweep_all(
             address,

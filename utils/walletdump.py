@@ -4,9 +4,9 @@ import logging
 import operator
 import re
 
-from monero import exceptions
-from monero.backends.jsonrpc import JSONRPCWallet, RPCError
-from monero.wallet import Wallet
+from beldex import exceptions
+from beldex.backends.jsonrpc import JSONRPCWallet, RPCError
+from beldex.wallet import Wallet
 
 
 def url_data(url):
@@ -98,7 +98,7 @@ try:
 except (
     exceptions.WalletIsNotDeterministic,
     RPCError,
-):  # FIXME: Remove RPCError once PR#4563 is merged in monero
+):  # FIXME: Remove RPCError once PR#4563 is merged in beldex
     seed = "[--- wallet is not deterministic and has no seed ---]"
 print(
     "Keys:\n"

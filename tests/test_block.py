@@ -1,9 +1,9 @@
 from datetime import datetime
 import unittest
 
-from monero.block import Block
-from monero.numbers import from_atomic
-from monero.transaction import Transaction
+from beldex.block import Block
+from beldex.numbers import from_atomic
+from beldex.transaction import Transaction
 
 
 class BlockTestCase(unittest.TestCase):

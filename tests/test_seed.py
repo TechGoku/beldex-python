@@ -1,8 +1,8 @@
 import unittest
 
-from monero.address import Address
-from monero.seed import Seed
-from monero.wordlists import list_wordlists
+from beldex.address import Address
+from beldex.seed import Seed
+from beldex.wordlists import list_wordlists
 
 
 class SeedTestCase(unittest.TestCase):

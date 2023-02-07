@@ -4,11 +4,11 @@ import logging
 import os
 import responses
 
-from monero.const import NET_STAGE
-from monero.daemon import Daemon
-from monero.backends.jsonrpc import JSONRPCDaemon, RPCError
-from monero.exceptions import TransactionWithoutBlob, DaemonIsBusy
-from monero.transaction import Transaction
+from beldex.const import NET_STAGE
+from beldex.daemon import Daemon
+from beldex.backends.jsonrpc import JSONRPCDaemon, RPCError
+from beldex.exceptions import TransactionWithoutBlob, DaemonIsBusy
+from beldex.transaction import Transaction
 
 from .base import JSONTestCase
 

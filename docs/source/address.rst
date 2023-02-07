@@ -5,7 +5,7 @@ The first, original address of the wallet is usually known as the *master
 address*. All others are just *subaddresses*, even if they represent a separate
 account within the wallet.
 
-Monero addresses are base58-encoded strings. You may disassemble each of them
+Beldex addresses are base58-encoded strings. You may disassemble each of them
 using the excellent `address analysis tool`_ from *luigi1111*.
 
 While the ordinary string representation is perfectly valid to use, you may
@@ -17,7 +17,7 @@ package.
 Address validation and instatination
 ------------------------------------
 
-The function ``monero.address.address()`` will recognize and validate Monero
+The function ``monero.address.address()`` will recognize and validate Beldex
 address, returning an instance that provides additional functionality.
 
 The following example uses addresses from the wallet :doc:`we have generated in
@@ -27,7 +27,7 @@ Let's start with the master address:
 
 .. code-block:: python
 
-    In [1]: from monero.address import address
+    In [1]: from beldex.address import address
 
     In [2]: a = address('A2GmyHHJ9jtUhPiwoAbR2tXU9LJu2U6fJjcsv3rxgkVRWU6tEYcn6C1NBc7wqCv5V7NW3zeYuzKf6RGGgZTFTpVC4QxAiAX')
 
@@ -81,7 +81,7 @@ It is possible to get subaddresses in two ways:
 Payment IDs and integrated addresses
 ------------------------------------
 
-Each Monero transaction may carry a **payment ID**. It is a 64 or 256-bit long
+Each Beldex transaction may carry a **payment ID**. It is a 64 or 256-bit long
 number that carries additional information between parties. For example, a
 merchant can generate a payment ID for each order, or an exchange can assign
 one to each user. The customer/user would then attach the ID to the transaction,
@@ -136,7 +136,7 @@ integer and hexadecimal string representations.
 
 .. code-block:: python
 
-    In [18]: from monero.numbers import PaymentID
+    In [18]: from beldex.numbers import PaymentID
 
     In [19]: p1 = PaymentID(0xfeedbadbeef)
 

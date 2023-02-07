@@ -1,7 +1,7 @@
 import unittest
 
-from monero.backends.offline import OfflineWallet, WalletIsOffline
-from monero.wallet import Wallet
+from beldex.backends.offline import OfflineWallet, WalletIsOffline
+from beldex.wallet import Wallet
 from .base import JSONTestCase
 
 

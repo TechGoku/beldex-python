@@ -1,7 +1,7 @@
 from decimal import Decimal
 import unittest
 
-from monero.numbers import to_atomic, from_atomic, as_monero, PaymentID
+from beldex.numbers import to_atomic, from_atomic, as_beldex, PaymentID
 
 
 class NumbersTestCase(unittest.TestCase):
@@ -22,7 +22,7 @@ class NumbersTestCase(unittest.TestCase):
     def test_rounding(self):
         self.assertEqual(to_atomic(Decimal("1.0000000000004")), 1000000000000)
         self.assertEqual(
-            as_monero(Decimal("1.0000000000014")), Decimal("1.000000000001")
+            as_beldex(Decimal("1.0000000000014")), Decimal("1.000000000001")
         )
 
     def test_payment_id(self):

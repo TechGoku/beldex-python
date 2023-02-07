@@ -5,10 +5,10 @@ import operator
 import re
 import sys
 
-from monero.backends.jsonrpc import JSONRPCDaemon
-from monero.daemon import Daemon
-from monero.transaction import Transaction
-from monero import exceptions
+from beldex.backends.jsonrpc import JSONRPCDaemon
+from beldex.daemon import Daemon
+from beldex.transaction import Transaction
+from beldex import exceptions
 
 
 def url_data(url):

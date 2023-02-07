@@ -4,7 +4,7 @@ from .transaction import Transaction
 
 class Block(object):
     """
-    A Monero block. Identified by `hash` (optionaly by `height`).
+    A Beldex block. Identified by `hash` (optionaly by `height`).
 
     This class is not intended to be turned into objects by the user,
     it is used by backends.

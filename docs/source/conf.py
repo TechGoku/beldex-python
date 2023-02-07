@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Monero Python module documentation build configuration file, created by
+# Beldex Python module documentation build configuration file, created by
 # sphinx-quickstart on Tue Jan 16 21:37:52 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -47,7 +47,7 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = "Monero Python module"
+project = "Beldex Python module"
 copyright = "2018, Michal Salaban"
 author = "Michal Salaban"
 
@@ -114,7 +114,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "MoneroPythonmoduledoc"
+htmlhelp_basename = "BeldexPythonmoduledoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -141,7 +141,7 @@ latex_documents = [
     (
         master_doc,
         "MoneroPythonmodule.tex",
-        "Monero Python module Documentation",
+        "Beldex Python module Documentation",
         "Michal Salaban",
         "manual",
     ),
@@ -156,7 +156,7 @@ man_pages = [
     (
         master_doc,
         "moneropythonmodule",
-        "Monero Python module Documentation",
+        "Beldex Python module Documentation",
         [author],
         1,
     )
@@ -172,7 +172,7 @@ texinfo_documents = [
     (
         master_doc,
         "MoneroPythonmodule",
-        "Monero Python module Documentation",
+        "Beldex Python module Documentation",
         author,
         "MoneroPythonmodule",
         "One line description of project.",

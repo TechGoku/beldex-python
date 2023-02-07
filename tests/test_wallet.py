@@ -3,11 +3,11 @@ from decimal import Decimal
 import unittest
 import warnings
 
-from monero.wallet import Wallet
-from monero.account import Account
-from monero.address import address
-from monero.numbers import PaymentID
-from monero.transaction import IncomingPayment, Transaction
+from beldex.wallet import Wallet
+from beldex.account import Account
+from beldex.address import address
+from beldex.numbers import PaymentID
+from beldex.transaction import IncomingPayment, Transaction
 
 
 class FiltersTestCase(unittest.TestCase):

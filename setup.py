@@ -21,12 +21,12 @@ def find_version(*parts):
     raise RuntimeError("Unable to find version string.")
 
 
-version = find_version("monero", "__init__.py")
+version = find_version("beldex", "__init__.py")
 
 setup(
-    name="monero",
+    name="beldex",
     version=version,
-    description="A comprehensive Python module for handling Monero cryptocurrency",
+    description="A comprehensive Python module for handling Beldex cryptocurrency",
     url="https://github.com/monero-ecosystem/monero-python/",
     long_description=open("README.rst", "rb").read().decode("utf-8"),
     install_requires=open("requirements.txt", "r").read().splitlines(),
@@ -50,6 +50,6 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    keywords="monero cryptocurrency",
+    keywords="beldex cryptocurrency",
     test_suite="tests",
 )

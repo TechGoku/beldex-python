@@ -2,7 +2,7 @@ Backends
 ========
 
 The module comes with possibility of replacing the underlying backend. Backends are the protocols
-and methods used to communicate with the Monero daemon or wallet. As of the time of this writing,
+and methods used to communicate with the Beldex daemon or wallet. As of the time of this writing,
 the module offers the following options:
 
  * ``jsonrpc`` for the HTTP based RPC server,
@@ -11,7 +11,7 @@ the module offers the following options:
 JSON RPC
 ----------------
 
-This backend requires a running ``monero-wallet-rpc`` process with a Monero wallet file opened.
+This backend requires a running ``monero-wallet-rpc`` process with a Beldex wallet file opened.
 This can be on your local system or a remote node, depending on where the wallet file lives and
 where the daemon is running. Refer to the quickstart for general setup information.
 

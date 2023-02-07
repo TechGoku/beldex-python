@@ -2,16 +2,16 @@ Quick start
 ===========
 
 This quick start tutorial will guide you through the first steps of connecting
-to the Monero wallet. We assume you:
+to the Beldex wallet. We assume you:
 
- * have basic knowledge of Monero concepts of the wallet and daemon,
+ * have basic knowledge of Beldex concepts of the wallet and daemon,
  * know how to use CLI (*command line interface*),
  * have experience with Python.
 
 Connect to testnet for your own safety
 --------------------------------------
 
-The testnet is another Monero network where worthless coins circulate and
+The testnet is another Beldex network where worthless coins circulate and
 where, as the name suggests, all tests are supposed to be run. It's also a
 place for early deployment of future features of the currency itself. You may
 read `a brief explanation at stackexchange`_.
@@ -79,9 +79,9 @@ Connect to the wallet
 
 .. code-block:: python
 
-    In [1]: from monero.wallet import Wallet
+    In [1]: from beldex.wallet import Wallet
 
-    In [2]: from monero.backends.jsonrpc import JSONRPCWallet
+    In [2]: from beldex.backends.jsonrpc import JSONRPCWallet
 
     In [3]: w = Wallet(JSONRPCWallet(port=28088))
 

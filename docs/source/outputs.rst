@@ -11,7 +11,7 @@ a view-only wallet is enough).
 
 .. note:: Be aware that ed25519 cryptography used there is written in pure Python. Don't expect
         high efficiency there. If you plan a massive analysis of transactions, please check if
-        using Monero source code wouldn't be better for you.
+        using Beldex source code wouldn't be better for you.
 
 .. note:: Please make sure the wallet you provide has all existing subaddresses generated.
         If you run another copy of the wallet and use subaddresses, the wallet you pass to
@@ -34,9 +34,9 @@ An example usage:
 
 .. code-block:: python
 
-    In [1]: from monero.daemon import Daemon
+    In [1]: from beldex.daemon import Daemon
 
-    In [2]: from monero.wallet import Wallet
+    In [2]: from beldex.wallet import Wallet
 
     In [3]: daemon = Daemon(port=28081)
 

@@ -5,11 +5,11 @@ import logging
 import os
 import re
 
-import monero
-from monero.address import address
-from monero.numbers import as_monero
-from monero.wallet import Wallet
-from monero.backends.jsonrpc import JSONRPCWallet
+import beldex
+from beldex.address import address
+from beldex.numbers import as_beldex
+from beldex.wallet import Wallet
+from beldex.backends.jsonrpc import JSONRPCWallet
 
 
 def url_data(url):
@@ -25,10 +25,10 @@ def url_data(url):
 
 def destpair(s):
     addr, amount = s.split(":")
-    return (address(addr), as_monero(amount))
+    return (address(addr), as_beldex(amount))
 
 
-argsparser = argparse.ArgumentParser(description="Transfer Monero")
+argsparser = argparse.ArgumentParser(description="Transfer Beldex")
 argsparser.add_argument(
     "-v",
     dest="verbosity",
@@ -72,7 +72,7 @@ argsparser.add_argument(
     help="Destination address and amount (one or more pairs)",
 )
 args = argsparser.parse_args()
-prio = getattr(monero.const, "PRIO_{:s}".format(args.prio.upper()))
+prio = getattr(beldex.const, "PRIO_{:s}".format(args.prio.upper()))
 
 level = logging.WARNING
 if args.verbosity == 1:

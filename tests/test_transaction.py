@@ -4,10 +4,10 @@ from operator import attrgetter
 import random
 import unittest
 
-from monero.address import address
-from monero.numbers import PaymentID
-from monero.transaction import IncomingPayment, Transaction, Output, _ByHeight
-from monero import exceptions
+from beldex.address import address
+from beldex.numbers import PaymentID
+from beldex.transaction import IncomingPayment, Transaction, Output, _ByHeight
+from beldex import exceptions
 
 
 class FiltersTestCase(unittest.TestCase):

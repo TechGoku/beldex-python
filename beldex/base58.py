@@ -71,7 +71,7 @@ def encode_block(data, buf, index):
 
 
 def encode(hex):
-    """Encode hexadecimal string as base58 (ex: encoding a Monero address)."""
+    """Encode hexadecimal string as base58 (ex: encoding a Beldex address)."""
     data = _hexToBin(hex)
     l_data = len(data)
 
@@ -143,7 +143,7 @@ def decode_block(data, buf, index):
 
 
 def decode(enc):
-    """Decode a base58 string (ex: a Monero address) into hexidecimal form."""
+    """Decode a base58 string (ex: a Beldex address) into hexidecimal form."""
     enc = bytearray(enc, encoding="ascii")
     l_enc = len(enc)
 

@@ -2,12 +2,12 @@ from .backends.jsonrpc import JSONRPCDaemon
 
 
 class Daemon(object):
-    """Monero daemon.
+    """Beldex daemon.
 
     Provides interface to a daemon instance.
 
     :param backend: a daemon backend
-    :param \\**kwargs: arguments to initialize a :class:`JSONRPCDaemon <monero.backends.jsonrpc.JSONRPCDaemon>`
+    :param \\**kwargs: arguments to initialize a :class:`JSONRPCDaemon <beldex.backends.jsonrpc.JSONRPCDaemon>`
                         instance if no backend is given
     """
 

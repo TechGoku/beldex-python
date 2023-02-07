@@ -76,11 +76,11 @@ class BaseAddress(object):
 
 
 class Address(BaseAddress):
-    """Monero address.
+    """Beldex address.
 
-    Address of this class is the master address for a :class:`Wallet <monero.wallet.Wallet>`.
+    Address of this class is the master address for a :class:`Wallet <beldex.wallet.Wallet>`.
 
-    :param address: a Monero address as string-like object
+    :param address: a Beldex address as string-like object
     :param label: a label for the address (defaults to `None`)
     """
 
@@ -109,7 +109,7 @@ class Address(BaseAddress):
     def with_payment_id(self, payment_id=0):
         """Integrates payment id into the address.
 
-        :param payment_id: int, hexadecimal string or :class:`PaymentID <monero.numbers.PaymentID>`
+        :param payment_id: int, hexadecimal string or :class:`PaymentID <beldex.numbers.PaymentID>`
                     (max 64-bit long)
 
         :rtype: `IntegratedAddress`
@@ -133,7 +133,7 @@ class Address(BaseAddress):
 
 
 class SubAddress(BaseAddress):
-    """Monero subaddress.
+    """Beldex subaddress.
 
     Any type of address which is not the master one for a wallet.
     """
@@ -145,7 +145,7 @@ class SubAddress(BaseAddress):
 
 
 class IntegratedAddress(Address):
-    """Monero integrated address.
+    """Beldex integrated address.
 
     A master address integrated with payment id (short one, max 64 bit).
     """
@@ -164,7 +164,7 @@ class IntegratedAddress(Address):
     def payment_id(self):
         """Returns the integrated payment id.
 
-        :rtype: :class:`PaymentID <monero.numbers.PaymentID>`
+        :rtype: :class:`PaymentID <beldex.numbers.PaymentID>`
         """
         return numbers.PaymentID(hexlify(self._decoded[65:-4]).decode())
 
@@ -179,7 +179,7 @@ class IntegratedAddress(Address):
 
 
 def address(addr, label=None):
-    """Discover the proper class and return instance for a given Monero address.
+    """Discover the proper class and return instance for a given Beldex address.
 
     :param addr: the address as a string-like object
     :param label: a label for the address (defaults to `None`)

@@ -78,7 +78,7 @@ class OutgoingPayment(Payment):
 
 class Transaction(object):
     """
-    A Monero transaction. Identified by `hash`, it can be a part of a block of some `height`
+    A Beldex transaction. Identified by `hash`, it can be a part of a block of some `height`
     or not yet mined (`height` is `None` then).
 
     This class is not intended to be turned into objects by the user,
@@ -303,7 +303,7 @@ class Transaction(object):
 
 class Output(object):
     """
-    A Monero one-time public output (A.K.A stealth address).
+    A Beldex one-time public output (A.K.A stealth address).
     Identified by `stealth_address`, or `index` and `amount`
     together, it can contain differing levels of information on an output.
 

@@ -5,28 +5,28 @@ EMPTY_KEY = "0" * 64
 
 
 def to_atomic(amount):
-    """Convert Monero decimal to atomic integer of piconero."""
+    """Convert Beldex decimal to atomic integer of piconero."""
     if not isinstance(amount, (Decimal, int, float)):
         raise ValueError(
             "Amount '{}' doesn't have numeric type. Only Decimal, int, long and "
             "float (not recommended) are accepted as amounts.".format(amount)
         )
-    return int(amount * 10**12)
+    return int(amount * 10**9)
 
 
 def from_atomic(amount):
-    """Convert atomic integer of piconero to Monero decimal."""
+    """Convert atomic integer of piconero to Beldex decimal."""
     return (Decimal(amount) * PICONERO).quantize(PICONERO)
 
 
-def as_monero(amount):
-    """Return the amount rounded to maximal Monero precision."""
+def as_beldex(amount):
+    """Return the amount rounded to maximal Beldex precision."""
     return Decimal(amount).quantize(PICONERO)
 
 
 class PaymentID(object):
     """
-    A class that validates Monero payment ID.
+    A class that validates Beldex payment ID.
 
     Payment IDs can be used as str or int across the module, however this class
     offers validation as well as simple conversion and comparison to those two
@@ -55,7 +55,7 @@ class PaymentID(object):
 
     def is_short(self):
         """Returns True if payment ID is short enough to be included
-        in :class:`IntegratedAddress <monero.address.IntegratedAddress>`."""
+        in :class:`IntegratedAddress <beldex.address.IntegratedAddress>`."""
         return self._payment_id.bit_length() <= 64
 
     def __repr__(self):

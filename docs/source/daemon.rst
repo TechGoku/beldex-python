@@ -1,14 +1,14 @@
 Interacting with daemon
 =======================
 
-The module offers an interface to interact with Monero daemon. For the time being, the only
+The module offers an interface to interact with Beldex daemon. For the time being, the only
 available method to connnect to a daemon is by JSON RPC commands but the module allows for
 providing a :doc:`custom backend <backends>`. The initializer
 accepts keywords including, but not limited to, ``host``, ``port``, ``user``, and ``password``.
 
 .. code-block:: python
 
-    In [1]: from monero.daemon import Daemon
+    In [1]: from beldex.daemon import Daemon
 
     In [2]: daemon = Daemon(port=28081)
 
@@ -46,9 +46,9 @@ The only difference is that now you want to add the ``relay=False`` argument.
 
 .. code-block:: python
 
-    In [6]: from monero.wallet import Wallet
+    In [6]: from beldex.wallet import Wallet
 
-    In [7]: from monero.backends.jsonrpc import JSONRPCWallet
+    In [7]: from beldex.backends.jsonrpc import JSONRPCWallet
 
     In [8]: wallet = Wallet(JSONRPCWallet(port=28088))
 
@@ -155,7 +155,7 @@ Other RPC Commands
 ------------------
 
 Any RPC commands not available in the Daemon class, are likely available in the JSONRPCDaemon
-class. The official Monero Daemon RPC Documentation can be found
+class. The official Beldex Daemon RPC Documentation can be found
 `here <https://www.getmonero.org/resources/developer-guides/daemon-rpc.html>`. At the time of
 writing, all the RPC commands from the documentation have been implemented in JSONRPCDaemon, with
 the exception of any .bin commands, `/get_txpool_backlog`, and `/get_output_distribution`. These
@@ -165,7 +165,7 @@ methods reflect the raw JSON objects returned by the daemon. An example:
 
 .. code-block:: python
 
-    [In 20]: from monero.backends.jsonrpc import JSONRPCDaemon
+    [In 20]: from beldex.backends.jsonrpc import JSONRPCDaemon
 
     [In 21]: daemon = JSONRPCDaemon(host='192.168.0.50')
 

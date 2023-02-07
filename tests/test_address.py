@@ -1,7 +1,7 @@
 import unittest
 
-from monero import const
-from monero.address import Address, SubAddress, IntegratedAddress, address
+from beldex import const
+from beldex.address import Address, SubAddress, IntegratedAddress, address
 from tests.utils import classproperty
 
 

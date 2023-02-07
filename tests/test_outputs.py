@@ -2,12 +2,12 @@ from decimal import Decimal
 import json
 import responses
 
-from monero.backends.jsonrpc import JSONRPCDaemon, JSONRPCWallet
-from monero.backends.offline import OfflineWallet
-from monero.daemon import Daemon
-from monero.transaction import Transaction, Payment
-from monero.transaction.extra import ExtraParser
-from monero.wallet import Wallet
+from beldex.backends.jsonrpc import JSONRPCDaemon, JSONRPCWallet
+from beldex.backends.offline import OfflineWallet
+from beldex.daemon import Daemon
+from beldex.transaction import Transaction, Payment
+from beldex.transaction.extra import ExtraParser
+from beldex.wallet import Wallet
 
 from .base import JSONTestCase
 
