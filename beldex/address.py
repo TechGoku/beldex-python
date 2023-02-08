@@ -172,7 +172,7 @@ class IntegratedAddress(Address):
         :rtype: :class:`Address`
         """
         prefix = const.MASTERADDR_NETBYTES[const.NETS.index(self.net)]
-        data = bytearray([prefix]) + self._decoded[1:65]
+        data = bytearray([prefix]) + self._decoded[2:65]
         checksum = keccak_256(data).digest()[:4]
         return Address(base58.encode(hexlify(data + checksum)))
 
@@ -197,7 +197,7 @@ def address(addr, label=None):
                 nb=netbyte,
                 allowed=", ".join(
                     map(
-                        lambda b: "%04x" % b,
+                        lambda b: "%02x" % b,
                         sorted(Address._valid_netbytes + SubAddress._valid_netbytes),
                     )
                 ),
