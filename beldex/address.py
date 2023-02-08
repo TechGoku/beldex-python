@@ -9,7 +9,7 @@ from . import numbers
 from .keccak import keccak_256
 
 _ADDR_REGEX = re.compile(
-    r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{97}$"
+    r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{95}$"
 )
 _IADDR_REGEX = re.compile(
     r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{106}$"
@@ -149,7 +149,6 @@ class IntegratedAddress(Address):
 
     A master address integrated with payment id (short one, max 64 bit).
     """
-
     _valid_netbytes = const.INTADDRR_NETBYTES
 
     def __init__(self, address):
