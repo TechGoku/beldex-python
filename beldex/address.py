@@ -9,7 +9,7 @@ from . import numbers
 from .keccak import keccak_256
 
 _ADDR_REGEX = re.compile(
-    r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{95}$"
+    r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{97}$"
 )
 _IADDR_REGEX = re.compile(
     r"^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{106}$"

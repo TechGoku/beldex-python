@@ -162,7 +162,7 @@ class Seed(object):
                     net
                 )
             )
-        netbyte = (209, 53, 24)[const.NETS.index(net)]
+        netbyte = (0xd1, 53, 24)[const.NETS.index(net)]
         data = "{:x}{:s}{:s}".format(
             netbyte, self.public_spend_key(), self.public_view_key()
         )
