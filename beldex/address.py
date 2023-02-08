@@ -197,7 +197,7 @@ def address(addr, label=None):
                 nb=netbyte,
                 allowed=", ".join(
                     map(
-                        lambda b: "%02x" % b,
+                        lambda b: "%04x" % b,
                         sorted(Address._valid_netbytes + SubAddress._valid_netbytes),
                     )
                 ),
