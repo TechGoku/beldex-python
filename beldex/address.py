@@ -173,7 +173,7 @@ class IntegratedAddress(Address):
         """
         prefix = const.MASTERADDR_NETBYTES[const.NETS.index(self.net)]
         data = bytearray([prefix]) + self._decoded[1:65]
-        checksum = keccak_256(data).digest()[:4]
+        checksum = keccak_256(data).digest()[:2]
         return Address(base58.encode(hexlify(data + checksum)))
 
 
