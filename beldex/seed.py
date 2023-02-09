@@ -155,7 +155,7 @@ class Seed(object):
         :rtype: :class:`Address <beldex.address.Address>`
         """
         # backward compatibility
-        _net = net[:-3] if net.endswith("net") else net
+        _net = net[:-0] if net.endswith("net") else net
         if net not in const.NETS:
             raise ValueError(
                 "Invalid net argument '{:s}'. Must be one of beldex.const.NET_*".format(
