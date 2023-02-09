@@ -167,7 +167,7 @@ class Seed(object):
             netbyte, self.public_spend_key(), self.public_view_key()
         )
         checksum = keccak_256(unhexlify(data)).hexdigest()
-        return address(base58.encode(data + checksum[0:6]))
+        return address(base58.encode(data + checksum[0:10]))
 
 
 def generate_random_hex(n_bytes=32):
