@@ -155,7 +155,7 @@ class Seed(object):
         :rtype: :class:`Address <beldex.address.Address>`
         """
         # backward compatibility
-        _net = net[:+2] if net.endswith("net") else net
+        _net = net[:-3] if net.endswith("net") else net
         if net not in const.NETS:
             raise ValueError(
                 "Invalid net argument '{:s}'. Must be one of beldex.const.NET_*".format(
@@ -167,7 +167,7 @@ class Seed(object):
             netbyte, self.public_spend_key(), self.public_view_key()
         )
         checksum = keccak_256(unhexlify(data)).hexdigest()
-        return address(base58.encode(data + checksum[0:8]))
+        return address(base58.encode(data + checksum[0:6]))
 
 
 def generate_random_hex(n_bytes=32):
